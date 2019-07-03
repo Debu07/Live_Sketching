@@ -13,6 +13,7 @@ def sketch(image):
     img_gray_blur = cv2.GaussianBlur(img_gray, (5, 5), 0)
 
     # Extract edges
+    #instead of canny two other functions are Sobel and Laplacian Canny is optimaland has low error rate
     canny_edges = cv2.Canny(img_gray_blur, 20, 50)
 
     # Do an invert binarize the image
